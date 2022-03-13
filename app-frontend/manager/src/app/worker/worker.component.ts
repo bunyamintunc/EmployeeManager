@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 
 import { WorkerService } from '../services/worker.service';
 
-declare var  window : any;
 
 @Component({
   selector: 'app-worker',
@@ -16,12 +15,10 @@ export class WorkerComponent implements OnInit {
   constructor(private workerService:WorkerService,private activadeRoute :ActivatedRoute) { }
 
   public workers : any = [];
-  formModal :any;
+
 
   ngOnInit(): void {
-    this.formModal = new window.bootstrap.Modal(
-      document.getElementById("exampleModal")
-    )
+
     this.catchWorkers()
  
   }
@@ -50,13 +47,6 @@ export class WorkerComponent implements OnInit {
     document.getElementById('add-worker-form')?.click();
   }
 
-  openModal(){
-    this.formModal.show();
-  }
-
-  doSomething(){
-    this.formModal.hide();
-  }
 
  
 
