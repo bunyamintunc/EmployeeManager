@@ -1,0 +1,7 @@
+#img{
+    overflow:hidden;
+}
+
+.modal .show{
+    display: block;
+}

@@ -1,0 +1,13 @@
+<div class="row ">
+
+    <div class="card m-2" style="width: 16rem;" *ngFor="let market of markets">
+         <a routerLink="market/{{market.marketId}}"><img class="card-img-top" [src]="market.imgUrl" alt="Card image cap"></a>
+        
+        <div class="card-body">
+          <h5 class="card-title text-center">{{market.name}}</h5>
+        </div>
+      </div>
+
+
+
+</div>
